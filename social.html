@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Social</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/fontawesome-all.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/swiper.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/magnific-popup.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static',filename='css/bootstrap.css') }}" rel="stylesheet">
+  <!-- Swipe core CSS -->
+  <link href="{{ url_for('static',filename='dist/css/swipe.min.css') }}" rel="stylesheet">
+
+	<!-- Favicon  -->
+    <!-- <link rel="icon" href="images/favicon.png"> -->
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+	<!-- <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div> -->
+    <!-- end of preloader -->
+
+
+   <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+
+            <!-- Image Logo -->
+            <!-- <a class="navbar-brand logo-image" href="/"><img src="{{url_for('static', filename='images/logo.png')}}" alt="alternative"></a> -->
+            <a class="navbar-brand logo-image" href="/">EmpowHer</a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">OPPORTUNITIES</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/find-opportunity"><span class="item-text">FIND OPPORTUNITIES</span></a>
+                          <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="/post-opportunity"><span class="item-text">POST AN OPPORTUNITY</span></a>
+                            <!-- <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a> -->
+                        </div>
+                    </li>
+                    <!-- end of dropdown menu -->
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/resume-screening">RESUME SCREENING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/interviews">INTERVIEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/social">SOCIAL</a>
+                    </li>
+                </ul>
+                <span class="nav-item">
+                    <a class="btn-outline-sm" href="/login">LOG IN</a>
+                </span>
+            </div>
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+    <main>
+			<div class="layout">
+				<!-- Start of Navigation -->
+				<div class="navigation">
+					<div class="container">
+						<div class="inside">
+							<div class="nav nav-tab menu">
+								<button class="btn"><img class="avatar-xl" src="{{url_for('static', filename='dist/img/avatars/avatar-female-2.jpg')}}" alt="avatar"></button>
+								<a href="#members" data-toggle="tab"><i class="material-icons">account_circle</i></a>
+								<a href="#discussions" data-toggle="tab" class="active"><i class="material-icons active">chat_bubble_outline</i></a>
+								<a href="#notifications" data-toggle="tab" class="f-grow1"><i class="material-icons">notifications_none</i></a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End of Navigation -->
+				<!-- Start of Sidebar -->
+				<div class="sidebar" id="sidebar">
+					<div class="container">
+						<div class="col-md-12">
+							<div class="tab-content">
+								<!-- Start of Contacts -->
+								<div class="tab-pane fade" id="members">
+									<div class="search">
+										<form class="form-inline position-relative">
+											<input type="search" class="form-control" id="people" placeholder="Search for people...">
+											<button type="button" class="btn btn-link loop"><i class="material-icons">search</i></button>
+										</form>
+										<button class="btn create" data-toggle="modal" data-target="#exampleModalCenter"><i class="material-icons">person_add</i></button>
+									</div>
+									<div class="list-group sort">
+										<button class="btn filterMembersBtn active show" data-toggle="list" data-filter="all">All</button>
+										<button class="btn filterMembersBtn" data-toggle="list" data-filter="online">Online</button>
+										<button class="btn filterMembersBtn" data-toggle="list" data-filter="offline">Offline</button>
+									</div>
+									<div class="contacts">
+										<h1>Contacts</h1>
+										<div class="list-group" id="contacts" role="tablist">
+											<a href="#" class="filterMembers all online contact" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-1.jfif')}}" data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Software Developer</h5>
+													<p>Bangalore, Inida</p>
+												</div>
+												<div class="person-add">
+													<i class="material-icons">person</i>
+												</div>
+											</a>
+											<a href="#" class="filterMembers all online contact" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-2.jfif')}}" data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Tech jobs for girls</h5>
+													<p>Delhi, India</p>
+												</div>
+												<div class="person-add">
+													<i class="material-icons">person</i>
+												</div>
+											</a>
+											<a href="#" class="filterMembers all online contact" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-4.png')}}" data-toggle="tooltip" data-placement="top" title="Lean" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Hackathons</h5>
+													<p>India</p>
+												</div>
+												<div class="person-add">
+													<i class="material-icons">person</i>
+												</div>
+											</a>
+											<a href="#" class="filterMembers all online contact" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-4.jfif')}}" data-toggle="tooltip" data-placement="top" title="Mariette" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Analyst opportunities</h5>
+													<p>India</p>
+												</div>
+												<div class="person-add">
+													<i class="material-icons">person</i>
+												</div>
+											</a>
+											<a href="#" class="filterMembers all online contact" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-6.jfif')}}" data-toggle="tooltip" data-placement="top" title="Harmony" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Mentorship Programmes</h5>
+													<p>India</p>
+												</div>
+												<div class="person-add">
+													<i class="material-icons">person</i>
+												</div>
+											</a>
+											<a href="#" class="filterMembers all offline contact" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-1.jfif')}}" data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Scholarships in tech</h5>
+													<p>All over the world</p>
+												</div>
+												<div class="person-add">
+													<i class="material-icons">person</i>
+												</div>
+											</a>
+											<a href="#" class="filterMembers all offline contact" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-6.jfif')}}" data-toggle="tooltip" data-placement="top" title="Louis" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Research opportunities</h5>
+													<p>India</p>
+												</div>
+												<div class="person-add">
+													<i class="material-icons">person</i>
+												</div>
+											</a>
+											<a href="#" class="filterMembers all offline contact" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-3.jfif')}}" data-toggle="tooltip" data-placement="top" title="Ryan" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Accountant Jobs</h5>
+													<p>Delhi, India</p>
+												</div>
+												<div class="person-add">
+													<i class="material-icons">person</i>
+												</div>
+											</a>
+											<a href="#" class="filterMembers all offline contact" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-4.jfif')}}" data-toggle="tooltip" data-placement="top" title="Mildred" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Btech Students</h5>
+													<p>India</p>
+												</div>
+												<div class="person-add">
+													<i class="material-icons">person</i>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- End of Contacts -->
+								<!-- Start of Discussions -->
+								<div id="discussions" class="tab-pane fade active show">
+									<div class="search">
+										<form class="form-inline position-relative">
+											<input type="search" class="form-control" id="conversations" placeholder="Search for conversations...">
+											<button type="button" class="btn btn-link loop"><i class="material-icons">search</i></button>
+										</form>
+										<button class="btn create" data-toggle="modal" data-target="#startnewchat"><i class="material-icons">create</i></button>
+									</div>
+									<div class="list-group sort">
+										<button class="btn filterDiscussionsBtn active show" data-toggle="list" data-filter="all">All</button>
+										<button class="btn filterDiscussionsBtn" data-toggle="list" data-filter="read">Read</button>
+										<button class="btn filterDiscussionsBtn" data-toggle="list" data-filter="unread">Unread</button>
+									</div>
+									<div class="discussions">
+										<h1>Discussions</h1>
+										<div class="list-group" id="chats" role="tablist">
+											<a href="#list-chat" class="filterDiscussions all unread single active" id="list-chat-list" data-toggle="list" role="tab">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-1.jfif')}}" data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="new bg-yellow">
+													<span>+7</span>
+												</div>
+												<div class="data">
+													<h5>Software Developers</h5>
+													<span>Mon</span>
+													<p>A new job opening at Amazon for SDE-I, SDE-II, check out their career portal..</p>
+												</div>
+											</a>
+											<a href="#list-empty" class="filterDiscussions all unread single" id="list-empty-list" data-toggle="list" role="tab">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-6.jfif')}}" data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="new bg-pink">
+													<span>+10</span>
+												</div>
+												<div class="data">
+													<h5>Mentorship Programmes</h5>
+													<span>Sun</span>
+													<p>Flipkart GWC 3.0 is live now.....</p>
+												</div>
+											</a>
+											<a href="#list-chat" class="filterDiscussions all read single" id="list-chat-list2" data-toggle="list" role="tab">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-4.png')}}" data-toggle="tooltip" data-placement="top" title="Lean" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Hackathons</h5>
+													<span>Tus</span>
+													<p>Myntra Hackerramp weforshe is open for regiterations.....</p>
+												</div>
+											</a>
+											<a href="#list-empty" class="filterDiscussions all read single" id="list-empty-list2" data-toggle="list" role="tab">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-1.jfif')}}" data-toggle="tooltip" data-placement="top" title="Mariette" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Scholarships</h5>
+													<span>5 mins</span>
+													<p> Google Women Techmakers scholarship is accepting applications now from batch of 2023 and 2014</p>
+												</div>
+											</a>
+											<a href="#list-chat" class="filterDiscussions all read single" id="list-chat-list3" data-toggle="list" role="tab">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-3.jfif')}}" data-toggle="tooltip" data-placement="top" title="Harmony" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Accountant Jobs</h5>
+													<span>Mon</span>
+													<p>Check out carrer portal of Honda....</p>
+												</div>
+											</a>
+											<a href="#list-empty" class="filterDiscussions all read single" id="list-empty-list3" data-toggle="list" role="tab">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-4.jfif')}}" data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Research Opportunities</h5>
+													<span>Fri</span>
+													<p>Adobe Research is looking for interns for this summer...</p>
+												</div>
+											</a>
+											<a href="#list-request" class="filterDiscussions all unread single" id="list-request-list" data-toggle="list" role="tab">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-6.jfif')}}" data-toggle="tooltip" data-placement="top" title="Louis" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="new bg-gray">
+													<span>?</span>
+												</div>
+												<div class="data">
+													<h5>Tech Jobs</h5>
+													<span>Feb 10</span>
+													<p>Microsoft, Delhi is hiring....</p>
+												</div>
+											</a>
+											<a href="#list-empty" class="filterDiscussions all read single" id="list-empty-list4" data-toggle="list" role="tab">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-3.jfif')}}" data-toggle="tooltip" data-placement="top" title="Ryan" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5>Btech Students</h5>
+													<span>Feb 9</span>
+													<p>Hi! I am ABC, third year student at ....</p>
+												</div>
+											</a>
+											<a href="#list-chat" class="filterDiscussions all unread single" id="list-chat-list5" data-toggle="list" role="tab">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-4.jfif')}}" data-toggle="tooltip" data-placement="top" title="Mildred" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="new bg-green">
+													<span>+9</span>
+												</div>
+												<div class="data">
+													<h5>Analyst oppotunities</h5>
+													<span>Thu</span>
+													<p>Bain company and co. is hiring interns and full time analysts...</p>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- End of Discussions -->
+								<!-- Start of Notifications -->
+								<div id="notifications" class="tab-pane fade">
+									<div class="search">
+										<form class="form-inline position-relative">
+											<input type="search" class="form-control" id="notice" placeholder="Filter notifications...">
+											<button type="button" class="btn btn-link loop"><i class="material-icons filter-list">filter_list</i></button>
+										</form>
+									</div>
+									<div class="list-group sort">
+										<button class="btn filterNotificationsBtn active show" data-toggle="list" data-filter="all">All</button>
+										<button class="btn filterNotificationsBtn" data-toggle="list" data-filter="latest">Latest</button>
+										<button class="btn filterNotificationsBtn" data-toggle="list" data-filter="oldest">Oldest</button>
+									</div>
+									<div class="notifications">
+										<h1>Notifications</h1>
+										<div class="list-group" id="alerts" role="tablist">
+											<a href="#" class="filterNotifications all latest notification" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-1.jfif')}}" data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<p>Software Developer channel has accepted your friend request on EmpowHer.</p>
+													<span>feb 17, 2021</span>
+												</div>
+											</a>
+											<a href="#" class="filterNotifications all latest notification" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-1.jfif')}}" data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<p>Tech Jobs(Delhi), you have a new group suggestion today.</p>
+													<span>Jan 21, 2021</span>
+												</div>
+											</a>
+											<a href="#" class="filterNotifications all latest notification" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-2.jfif')}}"data-toggle="tooltip" data-placement="top" title="Mariette" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<p>Btech Students have a new message for you.</p>
+													<span>Feb 15, 2021</span>
+												</div>
+											</a>
+											<a href="#" class="filterNotifications all latest notification" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-6.jfif')}}" data-toggle="tooltip" data-placement="top" title="Louis" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<p>Amazon hav recruitment test today. Wish all applicants all the best.</p>
+													<span>Mar 12, 2021</span>
+												</div>
+											</a>
+											<a href="#" class="filterNotifications all latest notification" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-4.png')}}" data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<p>mentorship programmes has accepted your friend request on EmpowHer.</p>
+													<span>Jan 5, 2021</span>
+												</div>
+											</a>
+											<a href="#" class="filterNotifications all oldest notification" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-1.jfif')}}" data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<p>Scholarships have a new message for you.</p>
+													<span>feb 22, 2021</span>
+												</div>
+											</a>
+											<a href="#" class="filterNotifications all oldest notification" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-2.jfif')}}" data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<p>Research opportunties, you have a new group suggestion today.</p>
+													<span>Jan 29, 2021</span>
+												</div>
+											</a>
+											<a href="#" class="filterNotifications all oldest notification" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-3.jfif')}}" data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<p>Scolarships have a new message for you.</p>
+													<span>Jan 31, 2021</span>
+												</div>
+											</a>
+											<a href="#" class="filterNotifications all oldest notification" data-toggle="list">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-male-4.jfif')}}"data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
+												<div class="status">
+													<i class="material-icons offline">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<p>WTM is conducting technical test today. Wish all group members all the best.</p>
+													<span>March 2, 2021</span>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- End of Notifications -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End of Sidebar -->
+				<!-- Start of Add new Group -->
+				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="requests">
+							<div class="title">
+								<h1>Add new Group</h1>
+								<button type="button" class="btn" data-dismiss="modal" aria-label="Close"><i class="material-icons">close</i></button>
+							</div>
+							<div class="content">
+								<form>
+									<div class="form-group">
+										<label for="user">Group Name:</label>
+										<input type="text" class="form-control" id="user" placeholder="Add recipient..." required>
+										<div class="user" id="contact">
+											<img class="avatar-sm" src="{{url_for('static', filename='dist/img/avatars/avatar-female-6.jfif')}}" alt="avatar">
+											<h5>Scholarships</h5>
+											<button class="btn"><i class="material-icons">close</i></button>
+										</div>
+									</div>
+									<button type="submit" class="btn button w-100">Add Group</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End of Add Friends -->
+				<!-- Start of Create new group -->
+				<div class="modal fade" id="startnewchat" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="requests">
+							<div class="title">
+								<h1>Create new group</h1>
+								<button type="button" class="btn" data-dismiss="modal" aria-label="Close"><i class="material-icons">close</i></button>
+							</div>
+							<div class="content">
+								<form>
+									<div class="form-group">
+										<label for="participant">Group members:</label>
+										<input type="text" class="form-control" id="participant" placeholder="Add recipient..." required>
+										<div class="user" id="recipient">
+											<img class="avatar-sm" src="{{url_for('static', filename='dist/img/avatars/avatar-female-5.jpg')}}" alt="avatar">
+											<h5>Lorem</h5>
+											<button class="btn"><i class="material-icons">close</i></button>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="topic">Topic:</label>
+										<input type="text" class="form-control" id="topic" placeholder="What's the topic?" required>
+									</div>
+									<button type="submit" class="btn button w-100">Create New Group</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End of Create Chat -->
+				<div class="main">
+					<div class="tab-content" id="nav-tabContent">
+						<!-- Start of Babble -->
+						<div class="babble tab-pane fade active show" id="list-chat" role="tabpanel" aria-labelledby="list-chat-list">
+							<!-- Start of Chat -->
+							<div class="chat" id="chat1">
+								<div class="top">
+									<div class="container">
+										<div class="col-md-12">
+											<div class="inside">
+												<a href="#"><img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-6.jfif')}}" data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar"></a>
+												<div class="status">
+													<i class="material-icons online">fiber_manual_record</i>
+												</div>
+												<div class="data">
+													<h5><a href="#">Research Applications</a></h5>
+													<span>QWE, QWERT, QWERTY, QW, ABC, ABCD, ME</span>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="content" id="content">
+									<div class="container">
+										<div class="col-md-12">
+											<div class="date">
+												<hr>
+												<span>Yesterday</span>
+												<hr>
+											</div>
+											<div class="message">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-5.jpg')}}" data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
+												<div class="text-main">
+													<div class="text-group">
+														<div class="text">
+															<p>I came across an amazing research opportunity.</p>
+														</div>
+													</div>
+													<span>09:46 AM</span>
+												</div>
+											</div>
+											<div class="message">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-5.jpg')}}" data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
+												<div class="text-main">
+													<div class="text-group">
+														<div class="text">
+															<p>Adobe Research is looking for interns as well as full time! It is great.</p>
+														</div>
+													</div>
+													<span>09:47 AM</span>
+												</div>
+											</div>
+											<div class="message">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-5.jpg')}}"data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
+												<div class="text-main">
+													<div class="text-group">
+														<div class="text">
+															<p>Application will be open soon.</p>
+														</div>
+													</div>
+													<span>09:48 AM</span>
+												</div>
+											</div>
+											<div class="message me">
+												<div class="text-main">
+													<div class="text-group me">
+														<div class="text me">
+															<p>Can't wait! I always wanted to work with adobe research </p>
+														</div>
+													</div>
+													<span>11:32 AM</span>
+												</div>
+											</div>
+											<div class="message me">
+												<div class="text-main">
+													<div class="text-group me">
+														<div class="text me">
+															<p>Do you know exact date of the application release? </p>
+														</div>
+													</div>
+													<span>11:33 AM</span>
+												</div>
+											</div>
+											<div class="message">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-3.jpg')}}" data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
+												<div class="text-main">
+													<div class="text-group">
+														<div class="text">
+															<p>Ya! I know! Applications will be live on 14 march'2021. </p>
+														</div>
+													</div>
+													<span>02:56 PM</span>
+												</div>
+											</div>
+											<div class="message me">
+												<div class="text-main">
+													<div class="text-group me">
+														<div class="text me">
+															<p>Oh! Can you share the link for the same when available?</p>
+														</div>
+													</div>
+													<div class="text-group me">
+														<div class="text me">
+															<p>I will try to update my resume till then</p>
+														</div>
+													</div>
+													<span>10:21 PM</span>
+												</div>
+											</div>
+											<div class="message">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-3.jpg')}}" data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
+												<div class="text-main">
+													<div class="text-group">
+														<div class="text">
+															<p>Ya sure! i will share</p>
+														</div>
+													</div>
+													<span>11:07 PM</span>
+												</div>
+											</div>
+											<div class="date">
+												<hr>
+												<span>Today</span>
+												<hr>
+											</div>
+											<div class="message me">
+												<div class="text-main">
+													<div class="text-group me">
+														<div class="text me">
+															<p>Last year you got selected for it! It would be great if you can review my resume once .</p>
+														</div>
+													</div>
+													<span>10:21 PM</span>
+												</div>
+											</div>
+											<div class="message">
+												<img class="avatar-md" src="{{url_for('static', filename='dist/img/avatars/avatar-female-3.jpg')}}" data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
+												<div class="text-main">
+													<div class="text-group">
+														<div class="text">
+															<p>My pleasure! Drop me a personal message. We will discuss your profile there.</p>
+															</div>
+														</div>
+													</div>
+													<span>11:07 PM</span>
+												</div>
+											</div>
+											<div class="message me">
+												<div class="text-main">
+													<div class="text-group me">
+														<div class="text me">
+															<p>Oh Okay! Thank you so much</p>
+														</div>
+													</div>
+													<span><i class="material-icons">check</i>10:21 PM</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="container">
+									<div class="col-md-12">
+										<div class="bottom">
+											<form class="position-relative w-100">
+												<textarea class="form-control" placeholder="Start typing for reply..." rows="1"></textarea>
+												<button type="submit" class="btn send"><i class="material-icons">send</i></button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End of Chat -->
+						</div>
+
+					</div>
+				</div>
+			</div> <!-- Layout -->
+		</main>
+
+
+
+   <!-- Footer -->
+    <svg class="footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill: #4ec4ce;}</style></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col first">
+                        <h4>About EmpowHer</h4>
+                        <p class="p-small">We're passionate about empowering women by helping them advance in their careers and bridging the gender disparity in the industry</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <!-- <h4>Contact</h4> -->
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <i class="fab fa-linkedin-in" style="margin-top: 5px;"></i>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com" style="text-decoration:none;">Linkedin - Akanksha Tanwar</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fab fa-linkedin-in" style="margin-top: 5px;"></i>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com" style="text-decoration:none;">Linkedin - Anima Jainr</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fab fa-linkedin-in" style="margin-top: 5px;"></i>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com" style="text-decoration:none;">Linkedin - Shreoshi Roy</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p> -->
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{ url_for('static',filename='js/popper.min.js') }}"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script> <!-- Bootstrap framework -->
+    <script src="{{ url_for('static',filename='js/jquery.easing.min.js') }}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{{ url_for('static',filename='js/swiper.min.js') }}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{{ url_for('static',filename='js/jquery.magnific-popup.js') }}"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{{ url_for('static',filename='js/validator.min.js') }}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{{ url_for('static',filename='js/scripts.js') }}"></script> <!-- Custom scripts -->
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<!-- <script src="js/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+		<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='dist/js/vendor/jquery-slim.min.js') }}"><\/script>')</script>
+		<script src="{{ url_for('static',filename='js/popper.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='dist/js/swipe.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		<script>
+			function scrollToBottom(el) { el.scrollTop = el.scrollHeight; }
+			scrollToBottom(document.getElementById('content'));
+		</script>
+</body>
+</html>

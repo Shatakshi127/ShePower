@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>SheHacks</title>
+
+  <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/fontawesome-all.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/swiper.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/magnific-popup.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet">
+	<!-- Favicon  -->
+    <!-- <link rel="icon" href="images/favicon.png"> -->
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+	<!-- <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div> -->
+    <!-- end of preloader -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+
+            <!-- Image Logo -->
+            <!-- <a class="navbar-brand logo-image" href="/"><img src="{{url_for('static', filename='images/logo.png')}}" alt="alternative"></a> -->
+            <a class="navbar-brand logo-image" href="/">EmpowHer</a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">OPPORTUNITIES</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/find-opportunity"><span class="item-text">FIND OPPORTUNITIES</span></a>
+                          <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="/post-opportunity"><span class="item-text">POST AN OPPORTUNITY</span></a>
+                            <!-- <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a> -->
+                        </div>
+                    </li>
+                    <!-- end of dropdown menu -->
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/resume-screening">RESUME SCREENING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/interviews">INTERVIEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/social">SOCIAL</a>
+                    </li>
+                </ul>
+                <span class="nav-item">
+                    <a class="btn-outline-sm" href="/login">LOG IN</a>
+                </span>
+            </div>
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h1>Your holy grail to the latest career opportunities</h1>
+                            <p class="p-large">Your one-stop platform for faster, clearer and clutter-free access to every career opportunity</p>
+                            <a class="btn-solid-lg page-scroll" href="/signup">SIGN UP</a>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-6">
+                        <div class="image-container">
+                            <div class="img-wrapper">
+                                <img class="img-fluid" src="{{url_for('static', filename='images/main.png')}}" alt="alternative">
+                            </div> <!-- end of img-wrapper -->
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <svg class="header-frame" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 310"><defs><style>.cls-1{fill: #4ec4ce;}</style></defs><title>header-frame</title><path class="cls-1" d="M0,283.054c22.75,12.98,53.1,15.2,70.635,14.808,92.115-2.077,238.3-79.9,354.895-79.938,59.97-.019,106.17,18.059,141.58,34,47.778,21.511,47.778,21.511,90,38.938,28.418,11.731,85.344,26.169,152.992,17.971,68.127-8.255,115.933-34.963,166.492-67.393,37.467-24.032,148.6-112.008,171.753-127.963,27.951-19.26,87.771-81.155,180.71-89.341,72.016-6.343,105.479,12.388,157.434,35.467,69.73,30.976,168.93,92.28,256.514,89.405,100.992-3.315,140.276-41.7,177-64.9V0.24H0V283.054Z"/></svg>
+    <!-- end of header -->
+
+
+    <!-- Customers -->
+    <div class="slider-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Image Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container image-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                        <!-- <img class="img-fluid" src="images/customer-logo-1.png" alt="alternative"> -->
+                                        INSPIRE
+                                </div>
+                                <div class="swiper-slide">
+                                        <!-- <img class="img-fluid" src="images/customer-logo-2.png" alt="alternative"> -->
+                                        EMPOWER
+                                </div>
+                                <div class="swiper-slide">
+                                        <!-- <img class="img-fluid" src="images/customer-logo-3.png" alt="alternative"> -->
+                                        GROW
+                                </div>
+                                <div class="swiper-slide">
+                                        <!-- <img class="img-fluid" src="images/customer-logo-4.png" alt="alternative"> -->
+                                        HUSTLE
+                                </div>
+                                <div class="swiper-slide">
+                                        <!-- <img class="img-fluid" src="images/customer-logo-5.png" alt="alternative"> -->
+                                        BELIEVE
+                                </div>
+                                <div class="swiper-slide">
+                                        <!-- <img class="img-fluid" src="images/customer-logo-6.png" alt="alternative"> -->
+                                        LEARN
+                                </div>
+                            </div> <!-- end of swiper-wrapper -->
+                        </div> <!-- end of swiper container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of image slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-1 -->
+    <!-- end of customers -->
+
+    <!-- Features -->
+    <div id="features" class="tabs">
+        <div class="container">
+            <!-- <div class="row"> -->
+                <!-- <div class="col-lg-12">
+                    <div class="above-heading">FEATURES</div>
+                    <h2 class="h2-heading">Marketing Automation</h2>
+                    <p class="p-heading">Take your business strategy to the next level and automatize your marketing tasks to save time for product development. Tivo can provide results in less than 2 weeks</p>
+                </div> <!-- end of col -->
+            <!-- </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Tabs Links -->
+                    <!-- <ul class="nav nav-tabs" id="argoTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-list"></i>List Builder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-envelope-open-text"></i>Campaigns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-chart-bar"></i>Analytics</a>
+                        </li>
+                    </ul> -->
+                    <!-- end of tabs links -->
+
+                    <!-- Tabs Content -->
+                    <div class="tab-content" id="argoTabsContent">
+
+                        <!-- Tab -->
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image-container">
+                                        <img class="img-fluid" src="{{url_for('static', filename='images/goals.png')}}" />
+                                    </div> <!-- end of image-container -->
+                                </div> <!-- end of col -->
+                                <div class="col-lg-6">
+                                    <div class="text-container">
+                                        <h3>Our Goal</h3>
+                                        <p>to make a one stop place for all the opportunities and community for women and provide them with tools to grow together by connecting with relevant group of people and mentors.
+                                        </p>
+                                        <ul class="list-unstyled li-space-lg">
+                                            <li class="media">
+                                                <i class="fas fa-square"></i>
+                                                <div class="media-body">Display opportunities in an organized manner to avoid spam </div>
+                                            </li>
+                                            <li class="media">
+                                                <i class="fas fa-square"></i>
+                                                <div class="media-body">Create a safe space for women to discuss issues and discuss opportunities</div>
+                                            </li>
+
+                                        </ul>
+                                        <!-- <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">LIGHTBOX</a> -->
+                                    </div> <!-- end of text-container -->
+                                </div> <!-- end of col -->
+                            </div> <!-- end of row -->
+                        </div> <!-- end of tab-pane -->
+                        <!-- end of tab -->
+
+                    </div> <!-- end of tab content -->
+                    <!-- end of tabs content -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- end of features -->
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <defs><style>.elementor-shape-fill-1{fill:#ffafd5;}</style></defs>
+  <path class="elementor-shape-fill-1" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+  c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+  c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+</svg>
+        <!-- Details -->
+        <div id="details" class="basic-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h3>Our Services</h3>
+                            <p><i class="fas fa-check"></i>As promised, our platform provides you with access to plenty of resources to kick-start your career trail.</p>
+                            <p><i class="fas fa-check"></i> Never miss an opportunity again, we have got you covered with a vibrant community to keep you updated! </p>
+                            <p><i class="fas fa-check"></i> Not only that, connect with interviewers or professionals and network with your peers</p>
+
+                            <!-- <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Understand customers and meet their requirements</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-square"></i>
+                                    <div class="media-body">Targeted client base with Tivo's efficient technology</div>
+                                </li>
+                            </ul> -->
+                            <!-- <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a> -->
+                            <!-- <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a> -->
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-6">
+                        <div class="image-container">
+                            <img class="img-fluid services-img" src="{{url_for('static', filename='images/services.png')}}" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of basic-1 -->
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <defs><style>.elementor-shape-fill-2{fill:#ffafd5;}</style></defs>
+        	<path class="elementor-shape-fill-2" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+        	c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+        	c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+        </svg>
+        <!-- end of details -->
+
+
+    <!-- Description -->
+    <div class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">FEATURES</div>
+                    <h2 class="h2-heading">Clutter-free interface for easy-access</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff3796;">Organised Opportunities</h4>
+                            <p>Lost in a sea of posts and don't know which ones are for you? Make use of our systematic channels to find something for yourself today!</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff3796;">Automatic Classification</h4>
+                            <p>Tired of posting the same opportunity in multiple places? Our automatic classifier filters them into relevant channels without any labour</p>
+                        </div>
+                    </div>
+
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff3796;">Schedule Mock Interviews</h4>
+                            <p>Have Interview scares often? Why not be prepared for them beforehand with our Mock Interview Sessions with our female Industry Experts</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff3796;">Resume Screening</h4>
+                            <p>Visualise the overall picture of your Resume in the form of a pie-chart and look at the areas of expertise your resume convey</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+
+                    <div class="card">
+                        <div class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff3796;">Networking</h4>
+                            <p>Access our community bonding chat room and expand your network without any backlash, judgement and unsolicited messages</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: #ff3796;">Smart Chat Assistant</h4>
+                            <p>A smart chat assistant for your ease, which helps you to find relevant opportunities with keywords like company name, job-role, etc.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of description -->
+
+
+
+    <!-- Join -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">  <defs><style>.elementor-shape-fill-4{fill:#ffafd5;}</style></defs>
+    	<path class="elementor-shape-fill-4" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+    	c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+    	c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+    </svg> -->
+    <div class="join">
+      <h1>Level Up Your Career</h1>
+      <div class="p-heading">Find the perfect community and resources to aid your career growth!</div>
+        <a class="btn-outline-lg" href="sign-up.html">JOIN COMMUNITY</a>
+    </div>
+    <!-- <svg class="inverted-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <defs><style>.elementor-shape-fill-5{fill:#ffafd5;} .inverted-svg{transform: rotate(180deg);}</style></defs>
+    	<path class="elementor-shape-fill-5" d="M790.5,93.1c-59.3-5.3-116.8-18-192.6-50c-29.6-12.7-76.9-31-100.5-35.9c-23.6-4.9-52.6-7.8-75.5-5.3
+    	c-10.2,1.1-22.6,1.4-50.1,7.4c-27.2,6.3-58.2,16.6-79.4,24.7c-41.3,15.9-94.9,21.9-134,22.6C72,58.2,0,25.8,0,25.8V100h1000V65.3
+    	c0,0-51.5,19.4-106.2,25.7C839.5,97,814.1,95.2,790.5,93.1z"></path>
+    </svg> -->
+    <!-- end of Join -->
+
+
+    <!-- Donate-->
+    <div id="donate" class="row">
+        <div class="col-lg-7">
+          <h1>SUPPORT</h1>
+          <h1>OUR CAUSE</h1>
+          <p>Donate and help us sustain this platform. All your donations will be used to pay our interviewers and develop newer and cooler features!  Don't have the money? Use our resources to trail blaze in your technical journey and donate when you land that 6 figure opportunity! Even your small donation would make a huge impact</p>
+          <a class="btn-solid-reg" href="">DONATE</a>
+        </div>
+        <div class="image-container col-lg-5">
+            <img class="img-fluid donate-img" src="{{url_for('static', filename='images/donate.png')}}" alt="alternative">
+        </div>
+    </div>
+    <!-- end of donate -->
+
+
+
+    <!-- Footer -->
+    <svg class="footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill: #4ec4ce;}</style></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col first">
+                        <h4>About EmpowHer</h4>
+                        <p class="p-small">We're passionate about empowering women by helping them advance in their careers and bridging the gender disparity in the industry</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <!-- <h4>Contact</h4> -->
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <i class="fab fa-linkedin-in" style="margin-top: 5px;"></i>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com" style="text-decoration:none;">Linkedin - Akanksha Tanwar</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fab fa-linkedin-in" style="margin-top: 5px;"></i>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com" style="text-decoration:none;">Linkedin - Anima Jainr</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fab fa-linkedin-in" style="margin-top: 5px;"></i>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com" style="text-decoration:none;">Linkedin - Shreoshi Roy</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{ url_for('static',filename='js/popper.min.js') }}"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script> <!-- Bootstrap framework -->
+    <script src="{{ url_for('static',filename='js/jquery.easing.min.js') }}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{{ url_for('static',filename='js/swiper.min.js') }}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{{ url_for('static',filename='js/jquery.magnific-popup.js') }}"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{{ url_for('static',filename='js/validator.min.js') }}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{{ url_for('static',filename='js/scripts.js') }}"></script> <!-- Custom scripts -->
+    <df-messenger
+      intent="WELCOME"
+      chat-title="EmpowHer"
+      agent-id="79cdc91d-f53c-4dad-907d-c15f3c8d81ec"
+      language-code="en"
+    ></df-messenger>
+    <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings =
+            {"appId":"17166c955f267a2fa5e4066019cd2f03f","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+</body>
+</html>

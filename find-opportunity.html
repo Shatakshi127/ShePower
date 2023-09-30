@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>SheHacks</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/fontawesome-all.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/swiper.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/magnific-popup.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet">
+
+	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+	<!-- <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div> -->
+    <!-- end of preloader -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+
+            <!-- Image Logo -->
+            <!-- <a class="navbar-brand logo-image" href="/"><img src="{{url_for('static', filename='images/logo.png')}}" alt="alternative"></a> -->
+            <a class="navbar-brand logo-image" href="/">EmpowHer</a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times"></span>
+            </button>
+            <!-- end of mobile menu toggle button -->
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">OPPORTUNITIES</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/find-opportunity"><span class="item-text">FIND OPPORTUNITIES</span></a>
+                          <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="/post-opportunity"><span class="item-text">POST AN OPPORTUNITY</span></a>
+                            <!-- <div class="dropdown-items-divide-hr"></div>
+                            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a> -->
+                        </div>
+                    </li>
+                    <!-- end of dropdown menu -->
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/resume-screening">RESUME SCREENING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/interviews">INTERVIEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/social">SOCIAL</a>
+                    </li>
+                </ul>
+                <span class="nav-item">
+                    <a class="btn-outline-sm" href="/login">LOG IN</a>
+                </span>
+            </div>
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <h4 class="opportunities-h4">Nothing is more expensive than a missed opportunity</h4>
+                    <h1>Seize yours with EMPOWHER</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+    <!-- Opportunities page starts -->
+    <div class="opportunities-div">
+      <div class="row">
+        <button class="tablink scope-active col-lg-6 col-md-6 col-sm-6" onclick="changeScope(event,'scope-women')"><span>For Women</span></button>
+        <button class="tablink col-lg-6 col-md-6 col-sm-6" onclick="changeScope(event,'scope-all')"><span>Open for All</span></button>
+      </div>
+
+      <div id="scope-women" class="scope-container scope">
+        <div class="icon-bar">
+          <a class="interest-active icon" onclick="changeInterest(event,'technical')"><i class="fas fa-code"></i></a>
+          <a class="icon" onclick="changeInterest(event,'non-tech')"><i class="fas fa-users"></i></a>
+          <a class="icon" onclick="changeInterest(event,'design')"><i class="fas fa-pencil-ruler"></i></a>
+          <a class="icon" onclick="changeInterest(event,'writing')"><i class="fas fa-pencil-alt"></i></a>
+          <a class="icon" onclick="changeInterest(event,'commerce')"><i class="fas fa-file-invoice-dollar"></i></a>
+          <a class="icon" onclick="changeInterest(event,'humanities')"><i class="fab fa-galactic-republic"></i></a>
+        </div>
+        <div class="icon-bar">
+          <span class="icon-label" href="#"> Tech</span>
+          <span class="icon-label" href="#"> Non-Tech</span>
+          <span class="icon-label" href="#"> Design</span>
+          <span class="icon-label" href="#"> Writing</span>
+          <span class="icon-label" href="#"> Commerce</span>
+          <span class="icon-label" href="#"> Humanities</span>
+        </div>
+
+        <div class="info">
+          <form class="form-register" action="#" method="post">
+            <li class="category active-category" onclick="changeCategory(event,'job')">Job openings</li>
+            <li class="category " onclick="changeCategory(event,'internship')">Internships</li>
+            <li class="category " onclick="changeCategory(event,'coding')">Coding contests</li>
+            <li class="category " onclick="changeCategory(event,'hackathon')">Hackathons</li>
+            <li class="category " onclick="changeCategory(event,'scholarship')">Scholarships</li>
+            <li class="category " onclick="changeCategory(event,'mentorship')">Mentorships</li>
+            <li class="category " onclick="changeCategory(event,'competition')" style="display:none">Competitions</li>
+          </form>
+
+          <!-- TECHNICAL JOB -->
+          <div class="content interest interest-active" id="technical-job">
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Amazon Wow</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 30th April,2021</span>
+                <p>Amazon brings an opportunity for all women enthusiastic about tech and are in the last year of graduation. So that young innovative women can land in SDE roles and other amazing teams.</p>
+                <a href="www.amazewit.in/amazewow">www.amazewit.in/amazewow</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/amaze_wit.png')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>UGC- Optum</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 1th May,2021</span>
+                <p>UGC- Optum is fortune 500 company and is hiring women as intern and Full time employees in India So, that women can unleash their innovation. Read the Job description below.</p>
+                <a href="https://drive.google.com/file/d/1k9pcs7FLeHiZnVEAdFESvusDMxEiKK9H/view?usp=sharing">Job Description</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/optum.jfif')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Senior Software Engineer, Microsoft</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 20th April,2021</span>
+                <p>Microsoft is one of the biggest tech giants in the world and every women who is programmer want to work with once in their life time. So, Here the Job Opening for all women, they were looking for so long.. </p>
+                <a href="https://careers.microsoft.com/professionals/us/en/job/901908/Senior-Software-Engineer">https://careers.microsoft.com/professionals/us/en/job/901908/Senior-Software-Engineer</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/microsoft.jfif')}}" alt="">
+              </div>
+            </div>
+
+          <div class="opportunity-card">
+              <div class="card-text">
+                <h3>GoldmanSachs, Engineering </h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 30th May,2021</span>
+                <p>GoldmanSachs is the biggest Bank of NewYork and one of the best work place for women. Apart from their finance department, they are also know for the engineering products they use. There's a chance for all women to get to know more about them by being a part of them... </p>
+                <a href="https://www.goldmansachs.com/careers/divisions/engineering/index.html">https://www.goldmansachs.com/careers/divisions/engineering/index.html</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/goldman.jfif')}}" alt="">
+              </div>
+            </div>
+        </div>
+
+          <!-- TECHNICAL HACKATHONS -->
+          <div class="content interest" id="technical-hackathon" style="display:none">
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Myntra Hackerramp weforshe</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 23rd April,2021</span>
+                <p>Women! Win Rs. 1,75,000 as prize money and a chance to get interviewed at Myntra (CTC ~24 LPA)
+Myntra is organizing a hackathon for women.
+Only for female students
+Eligibility: 2nd, 3rd, 4th-year girl students
+Team Size: 1-3 participants
+Last date to register: 12th March</p>
+                <a href="https://dare2compete.com/o/myntra-hackerramp-weforshe-myntra-151942">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/myntra_hackerramp.jfif')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Makeathon’21</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 30th April,2021</span>
+                <p>American Express is back with Makeathon 2021, a diversity event for women technologists across engineering colleges! This team-based competition will club essential elements of a coding-based challenge (Round 1) and a Hackathon/ prototype building (Round 2), offering budding women engineers the opportunity to showcase their technical prowess on a national platform competing with some of the best minds in the country offering them internships opportunity at American Express.
+                Eligibility:
+                Women students graduating in the years 2022 & 2023.</p>
+                <a href="https://american-express-makeathon-2021.hackerearth.com/">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/makeathon.jfif')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card new-opportunity-card" style="display:none;">
+              <div class="card-text" style="width:65%;">
+                <h3>SheHacks DTU</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 15th April,2021</span>
+                <p>Shoutout to all women in technology out there! CLIMB DTU is here with SheHacksDTU- Delhi's Largest All Women Hackathon! If you think you have the passion of coming up with innovative ideas to real world problems, then this is indeed the perfect platform for you!
+                Registrations are now open!
+                New to tech? Can't find a team? Don't worry we have you covered. We are extremely beginner-friendly and will provide mentorship throughout the hackathon and have ice-breaking sessions scheduled to help lone wolves find their pack!
+                Let's break the stereotypes and
+                INCLUDE HER!</p>
+                <a href="http://shehacks.climb.community/">http://shehacks.climb.community/</a>
+              </div>
+              <div class="card-image" style="width:35%;">
+                <img src="{{url_for('static', filename='images/shehacks.jfif')}}" alt="">
+              </div>
+            </div>
+          </div>
+
+
+          <!-- TECHNICAL Scholarships -->
+          <div class="content interest interest" id="technical-scholarship" style="display:none;">
+           <div class="opportunity-card">
+             <div class="card-text">
+               <h3>Generation Google Scholarship</h3>
+               <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 16th April,2021</span>
+               <p>Ready to be inspired?
+                 Applications for the 2021 Generation Google Scholarship: for women in computer science (APAC) are now open! Learn more about eligibility.
+                 Generation Google Scholarship: for women in computer science (formerly known as Women Techmakers Scholarship) aims to inspire and support students in the fields of computing and technology and become active role models and leaders in the industry.
+              </p>
+               <a href="http://goo.gle/3kidA0l%22%3EApply">http://goo.gle/3kidA0l%22%3EApply</a>
+             </div>
+             <div class="card-image">
+               <img src="{{url_for('static', filename='images/wtm.png')}}" alt="">
+             </div>
+           </div>
+         </div>
+
+          <!-- TECHNICAL Mentorships -->
+          <div class="content interest interest-active" id="technical-mentorship" style="display:none;">
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>JP morgan Quant mentorship program</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 26th April,2021</span>
+                <p>JP morgan brings you this amazing opportunity for all women to  get mentored by the experts women working with them.</p>
+                <a href="https://jpmc.recsolu.com/external/events/7fhj8JsCg3MnReoSQFtVVg">https://jpmc.recsolu.com/external/events/7fhj8JsCg3MnReoSQFtVVg</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/jpmorgan.jfif')}}" alt="">
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- NON-TECH -->
+          <div class="content interest" id="non-tech-job" style="display:none;">
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Data Analyst, Apple</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 30th April,2021</span>
+                <p>The people here at Apple don’t just build products with women in their team — they build the kind of wonder that’s revolutionized entire industries. It’s the diversity of those people and their ideas that encourages the innovation that runs through everything we do, from amazing technology to industry-leading environmental efforts. Women! Join Apple, and help us leave the world better than we found it.</p>
+                <a href="https://jobs.apple.com/en-in/details/200220368/data-analyst?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic\">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/apple.jfif')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Data Analytics Manager, ANI Calls India Private Limited</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 30th April,2021</span>
+                <p>Job Description
+• Women Lead and develop a team of Data Analysts.
+• Women who can Build and maintain relationships with business leaders, including the IT organization, executive leadership, and operations.
+• Supervise the delivery of daily, weekly, and monthly reporting requirements for the internal stakeholders. These reports include both templated reporting and newly created reporting requests.
+• Provide training to internal Permanents on how to utilize tools and reports.
+• Manage the creation of dashboards and reports using Microsoft Power BI and other reporting tools.
+• Locate and define new process improvement opportunities.
+• Execute extemporary data analysis, participate in senior-level discussions, and provide findings and best practices to senior leadership.
+• Develop and implement databases, data collection systems, and other strategies to optimize quality and efficiency in the organization.
+</p>
+
+
+                <a href="https://in.linkedin.com/jobs/view/data-analytics-manager-at-ani-calls-india-private-limited-2460632124?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/ani.png')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Business Analyst, Slice</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 26th April,2021</span>
+                <p>Slice is a Fintech startup focused on Young India. We are building a smart, simple, and transparent financial platform to redesign the life experience for millennials with help of women.At slice, we aim to build a financial platform driven by innovative technology where the role of an analyst comes into the picture.Analysts help shape slice's credit and product strategies by processing, analyzing and interpreting huge data sets. Women as a key member of the team, you work closely with leadership, credit, and product teams to craft and execute analytics-driven strategies for business growth.</p>
+                <a href="https://angel.co/company/sliceit/jobs/881052-business-analyst?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/slice.png')}}" alt="">
+              </div>
+            </div>
+          </div>
+
+          <!-- Commerce JOB -->
+          <div class="content interest interest-active" id="commerce-job" style="display:none">
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Female Chartered Accountant, Unicca Emporis Private Limited</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 25th April,2021</span>
+                <p>Punctuality for all work-related events by women. Always looking for ways to improve your skills. Coming to work on time. A positive attitude toward your job in general. Flexibility when assigned work tasks. To know more about this job email us your Resume - [Confidential Information]</p>
+                <a href="https://www.monsterindia.com/amp/job-vacancy-chartered-accountant-practicing-chartered-accountant-fresher-chartered-accountant-unicca-emporis-private-limited-delhi-26281733.html?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/unicca.jfif')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Female Chartered Accountant, EZTax.in</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 25th April,2021</span>
+                <p>Qualification: CA
++ Experienced female CA with 3-5 years of experience in handling Direct and Indirect Taxation along with NRI Taxation.
++ Must fit in Startup Culture with a primary motive to serve.
++ Must have proficiency in MS Office Tools, English, Hindi languages
++ Must have solid practical experience in ITR, GST Filings, Accounting
++ Good Communication Skills
++ Technical Skills to operate modern IT Systems
++ eMail / Chat / Telephonic Conversations</p>
+                <a href="https://eztax.in/chartered-accountant-job-ezjd24?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/ezTax.jfif')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Chartered Accountant, S.R.Recruiters</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 30th April,2021</span>
+                <p>Chartered Accountant is a designation given to an accounting professional who has received certification from a statutory body that she is qualified to take care of the matters related accounting and taxation of a business, like file tax returns, audit financial statements and business practices, maintaining records. So, we are looking for female CA.</p>
+                <a href="https://careers.microsoft.com/professionals/us/en/job/901908/Senior-Software-Engineer">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/sr_recruiters.jfif')}}" alt="">
+              </div>
+            </div>
+          </div>
+
+<!-- Writing JOB -->
+          <div class="content interest interest-active" id="writing-job" style="display:none">
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Content Writer, Skynox Tech</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 21th April,2021</span>
+                <p>Women! Hurry Up! We are looking for a female content writer to join our team and enrich our websites with new blog posts, guides, and marketing copy. Ultimately, you'll deliver quality writing pieces that appeal to our audiences, attract customers, and boost brand awareness.</p>
+                <a href="https://www.freshersworld.com/jobs/content-writing-jobs-in-across-india-skynox-tech-1122065?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/skynox.jfif')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Freelance Content writers, Springzo</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 31th April,2021</span>
+                <p>“Let me live, love, and say it well in good sentences.”
+– Sylvia Plath, The Unabridged Journals of Sylvia Plath
+Are you as passionate about good sentences, as Sylvia Plath? Come hither!
+We are looking for female freelance content writers who can… well… write! And write really well! So Women Hurry up</p>
+                <a href="https://www.glassdoor.co.in/job-listing/freelance-content-writer-springzo-JV_KO0,24_KE25,33.htm?jl=3767333037&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Now</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/sprinzo.jfif')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Female Content Writer, Engish Medium</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 20th April,2021</span>
+                <p>Selected female intern's day-to-day responsibilities include:
+1. Write blogs for the company's website and third-party platforms
+2. Handle the company's Quora platform by writing answers to relevant questions
+3. Work closely with the company's founders and create engaging content Skill(s) required
+• Search Engine Marketing (SEM)
+• Search Engine Optimization (SEO)
+• Creative Writing
+• English Proficiency (Spoken)
+• English Proficiency (Written) </p>
+                <a href="https://www.freshersworld.com/jobs/content-writing-jobs-in-across-india-english-medium-1111106?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/english_medium.jfif')}}" alt="">
+              </div>
+            </div>
+
+
+          <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Technical Content Writer, Fynd</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 29th April,2021</span>
+                <p>“If you can't explain it to a six-year-old, you don't understand it yourself.”
+• Albert Einstein
+If you live by this statement and a women, you might be the one we are looking for.
+We are looking for a prolific and talented female technical content creator to contribute to our vision of delivering the best information experience with great content. Your role will involve understanding the details of and around the product and articulate them in clear, concise, and illustrated manner. This role requires a high level of creativity and attention to detail. You must be able to distil complex information into clear, concise text.
+You must have a sound experience with Enterprise SaaS products & a knack and love for writing, a comprehensive understanding of the technical products, and experience in blogging to achieve business goals. </p>
+                <a href="https://angel.co/company/gofynd/jobs/1246089-technical-content-writer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Now</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/fynd.png')}}" alt="">
+              </div>
+            </div>
+          </div>
+
+<!-- DESIGN JOB -->
+          <div class="content interest interest-active" id="design-job" style="display:none">
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Female Graphic Designer, Myntra</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 30th April,2021</span>
+                <p>Requirements:
+Women Bachelor with 1-3 years of expertise in graphic designing
+Expertise in designing/ producing e-Learning courses
+Practice in working with an LMS and course developing software
+Outstanding English written and verbal communication skills
+Capability to work with a team and stakeholders at different levels of hierarchy
+Self-driven with the capability to work without continuous supervision
+Practice in graphic design software like Adobe Photoshop, Canva, Illustrator, Sketch, Corel draw, etc.
+Knowledge of video editing
+Self-driven with the capability to work without continuous supervision
+</p>
+                <a href=" https://dare2compete.com/o/graphic-designer-myntra-154013">Apply Here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/myntra.png')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>GRAPHIC DESIGNER, COLLEGE DUNIA</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 28th April,2021</span>
+                <p>Hello, Creative Women! We have an exciting opening for a Graphic Designer to join our growing creative team. You will have the opportunity to create designs that look to push the bar at every stage. We are looking for an enthusiastic and talented individual with a creative mindset and a real passion for creating compelling visual stories. As a Graphic Designer, you will be able to demonstrate excellent knowledge of the design process and have an extensive portfolio of design work.This creative role is a demanding one but will be hugely rewarding for the right female candidate. </p>
+                <a href="https://angel.co/company/collegedunia/jobs/242100-graphic-designer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Now</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/collegedunia.png')}}" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Female Graphic Designer, The Glitch</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 10th April,2021</span>
+                <p>The Glitch is India’s leading creative agency and is a part of WPP. We believe that through shaping culture, great business results can be delivered, and by being strategically driven great creativity can be achieved.In this role, Women will be responsible for creating design solutions that have a high visual impact. The role involves listening to clients and understanding their needs before making design decisions. The brief can come from the client, creative director or the account manager.</p>
+                <a href="http://jobs.jobvite.com/theglitch/job/o0Pgdfw2?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply here</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/glitch.jfif')}}" alt="">
+              </div>
+            </div>
+
+          <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Female Graphic designers, ApplyBoard</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 24th April,2021</span>
+                <p>We’re building a movement - an education revolution. We’re building a world where anyone, anywhere can have access to the best education regardless of where they were born. At our core, we believe education is a right, not a privilege. To that end, we’re building a company and a suite of products to lead the charge in transforming access to education. ApplyBoard is an online platform that empowers students around the world to access the best education by connecting international students, recruitment partners, and academic institutions. We simplify the study abroad search, application, and acceptance process. Not only do we help students with their study abroad journey, but we also help academic institutions to find the best students globally. Our goal is to help enable better, more diverse, schools that are enriched with cultures from all over the world that's why we want to hire women.</p>
+                <a href="https://angel.co/company/applyboard/jobs/1146875-graphic-designer-india?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Now</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/applyboard.png')}}" alt="">
+              </div>
+            </div>
+             <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Female Graphic Designer, Cognilements</h3>
+                <span style="font-size: 14px; font-weight:bold; margin-bottom:20px;">Last Date: 20th April,2021</span>
+                <p>Graphic Designer Job Responsibilities:
+• Prepares work to be accomplished by gathering information and materials.
+• Plans concept by studying information and materials.
+• Illustrates concept by designing rough layout of art and copy regarding arrangement, , type and style, and related aesthetic concepts.
+• Obtains approval of concept by submitting rough layout for approval.
+• Prepares finished copy and art by operating typesetting, printing, and similar equipment; and purchasing from vendors.
+• Prepares final layout by marking and pasting up finished copy and art.
+• Ensures operation of equipment by completing preventive maintenance requirements; following manufacturer’s instructions; troubleshooting malfunctions; calling for repairs; maintaining equipment inventories; and evaluating new equipment.
+• Completes projects by coordinating with outside agencies, art services, printers, etc.
+• Maintains technical knowledge by attending design workshops; reviewing professional publications and participating in professional societies.
+• Women who can Contributes to team effort by accomplishing related results as needed.
+</p>
+                <a href="https://www.monsterindia.com/amp/job-vacancy-graphic-designer-cognilements-india-pune-25146033.html?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">Apply Now</a>
+              </div>
+              <div class="card-image">
+                <img src="{{url_for('static', filename='images/cognilements.jfif')}}" alt="">
+              </div>
+            </div>
+          </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div id="scope-all" class="scope-container scope" style="display:none">
+        <div class="icon-bar">
+          <a class="active icon" href="#"><i class="fas fa-code"></i></a>
+          <a class="icon" href="#"><i class="fas fa-users"></i></a>
+          <a class="icon" href="#"><i class="fas fa-pencil-ruler"></i></a>
+          <a class="icon" href="#"><i class="fas fa-pencil-alt"></i></a>
+          <a class="icon" href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+          <a class="icon" href="#"><i class="fab fa-galactic-republic"></i></a>
+        </div>
+        <div class="icon-bar">
+          <span class="icon-label" href="#"> Tech</span>
+          <span class="icon-label" href="#"> Non-Tech</span>
+          <span class="icon-label" href="#"> Design</span>
+          <span class="icon-label" href="#"> Writing</span>
+          <span class="icon-label" href="#"> Commerce</span>
+          <span class="icon-label" href="#"> Humanities</span>
+        </div>
+
+        <div class="info">
+          <form class="form-register" action="#" method="post">
+            <a href="#" class="active-category">Job openings</a>
+            <a href="#">Internships</a>
+            <a href="#">Coding contests</a>
+            <a href="#">Hackathons</a>
+            <a href="#">Scholarships</a>
+            <a href="#">Mentorships</a>
+          </form>
+
+          <div class="content">
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>New York</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="https://womentechies.dscvit.com/">https://womentechies.dscvit.com/</a>
+              </div>
+              <div class="card-image">
+                <img src="images/article-details-small.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Arizona</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="https://womentechies.dscvit.com/">https://womentechies.dscvit.com/</a>
+              </div>
+              <div class="card-image">
+                <img src="images/article-details-small.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="opportunity-card">
+              <div class="card-text">
+                <h3>Los Angeles</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="https://womentechies.dscvit.com/">https://womentechies.dscvit.com/</a>
+              </div>
+              <div class="card-image">
+                <img src="images/article-details-small.jpg" alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <svg class="footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill: #4ec4ce;}</style></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col first">
+                        <h4>About EmpowHer</h4>
+                        <p class="p-small">We're passionate about empowering women by helping them advance in their careers and bridging the gender disparity in the industry</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <!-- <h4>Contact</h4> -->
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li class="media">
+                                <i class="fab fa-linkedin-in" style="margin-top: 5px;"></i>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com" style="text-decoration:none;">Linkedin - Akanksha Tanwar</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fab fa-linkedin-in" style="margin-top: 5px;"></i>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com" style="text-decoration:none;">Linkedin - Anima Jainr</a></div>
+                            </li>
+                            <li class="media">
+                                <i class="fab fa-linkedin-in" style="margin-top: 5px;"></i>
+                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com" style="text-decoration:none;">Linkedin - Shreoshi Roy</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a></p> -->
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script>
+      function changeScope(evt, scopeName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("scope");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" scope-active", "");
+        }
+        document.getElementById(scopeName).style.display = "block";
+        evt.currentTarget.className += " scope-active";
+      }
+
+      function changeInterest(evt, interestName) {
+        if(interestName!="technical"){
+          categories = document.getElementsByClassName("category");
+          categories[2].style.display = "none";
+          categories[3].style.display = "none";
+          categories[6].style.display = "block";
+          // categories[3].outerHTML = "<li class='category ' onclick='changeCategory(event,'competition')'>Competitions</li>";
+        }
+        else{
+          categories = document.getElementsByClassName("category");
+          categories[2].style.display = "block";
+          categories[3].style.display = "block";
+          categories[6].style.display = "none";
+          // categories[3].outerHTML = "<li class='category ' onclick='changeCategory(event,'hackathon')'>Hackathons</li>";
+        }
+
+
+        var i, x, y, tablinks;
+        x = document.getElementsByClassName("interest");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("icon");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace("active", "");
+        }
+        evt.currentTarget.className += " interest-active";
+        // document.getElementById(interestName).style.display = "block";
+
+        var final_category;
+        x = document.getElementsByClassName("category");
+        for (i = 0; i < x.length; i++) {
+          if(x[i].classList.contains("active-category")){
+            if(x[i].outerHTML.includes('job'))
+              final_category = "job";
+            else if(x[i].outerHTML.includes('internship'))
+              final_category = "internship";
+            else if(x[i].outerHTML.includes('coding'))
+              final_category = "coding";
+            else if(x[i].outerHTML.includes('hackathon'))
+              final_category = "hackathon";
+            else if(x[i].outerHTML.includes('scholarship'))
+              final_category = "scholarship";
+            else if(x[i].outerHTML.includes('mentorship'))
+              final_category = "mentorship";
+            else if(x[i].outerHTML.includes('competition'))
+              final_category = "competition";
+            break;
+          }
+        }
+        final_category = interestName+"-"+final_category;
+        // console.log(final_category);
+        document.getElementById(final_category).style.display = "block";
+      }
+
+      function changeCategory(evt, categoryName) {
+        categories = document.getElementsByClassName("category");
+        for (i = 0; i < categories.length; i++) {
+          categories[i].classList.remove("active-category");
+        }
+
+        var i, x, y, tablinks;
+        x = document.getElementsByClassName("interest");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        evt.currentTarget.className += " active-category ";
+
+        var final_category;
+        x = document.getElementsByClassName("icon");
+        for (i = 0; i < x.length; i++) {
+          if(x[i].classList.contains("interest-active")){
+            if(x[i].outerHTML.includes('technical'))
+              final_category = "technical";
+            else if(x[i].outerHTML.includes('non-tech'))
+              final_category = "non-tech";
+            else if(x[i].outerHTML.includes('design'))
+              final_category = "design";
+            else if(x[i].outerHTML.includes('writing'))
+              final_category = "writing";
+            else if(x[i].outerHTML.includes('commerce'))
+              final_category = "commerce";
+            else if(x[i].outerHTML.includes('commerce'))
+              final_category = "humanities";
+            break;
+          }
+        }
+        final_category = final_category+"-"+categoryName;
+        document.getElementById(final_category).style.display = "block";
+
+        if(final_category == "technical-hackathon"){
+          var x = document.querySelector(".new-opportunity-card");
+          setTimeout(function(){
+            x.style.display = "flex";
+          }, 8000);
+        }
+      }
+    </script>
+
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{ url_for('static',filename='js/popper.min.js') }}"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script> <!-- Bootstrap framework -->
+    <script src="{{ url_for('static',filename='js/jquery.easing.min.js') }}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{{ url_for('static',filename='js/swiper.min.js') }}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{{ url_for('static',filename='js/jquery.magnific-popup.js') }}"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{{ url_for('static',filename='js/validator.min.js') }}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{{ url_for('static',filename='js/scripts.js') }}"></script> <!-- Custom scripts -->
+  <df-messenger
+      intent="WELCOME"
+      chat-title="EmpowHer"
+      agent-id="79cdc91d-f53c-4dad-907d-c15f3c8d81ec"
+      language-code="en"
+    ></df-messenger>
+    <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings =
+            {"appId":"17166c955f267a2fa5e4066019cd2f03f","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+</body>
+</html>
